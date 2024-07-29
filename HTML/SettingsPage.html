@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../CSS/SettingsPage.css">
+    <link rel="stylesheet" href="../CSS/Global.css">
+    <title>Settings</title>
+</head>
+<body>
+<header>
+    <h1 onclick="location.href='MainPage.html'"> Best Curve </h1>
+</header>
+
+<div id="contentWrap">
+    <div id="controlWrap">
+        <h2> Settings </h2>
+        <div id="volumeWrap">
+            <h3> Volume </h3>
+            <label for="volume"></label><input type="range" min="0" max="100" value="100" class="slider" id="volume">
+        </div>
+        <div id="buttonWrap">
+            <div class="ctrl">
+                <h3> Left </h3>
+                <h3> Right </h3>
+                <h3> Skip </h3>
+            </div>
+            <div id="divider"></div>
+            <div class="ctrl">
+                <h2> A </h2>
+                <h2> D </h2>
+                <h2> Space </h2>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+<script type="module" src="../JS/SettingsPage.js"></script>
+</html>

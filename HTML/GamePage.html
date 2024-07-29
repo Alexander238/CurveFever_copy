@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../CSS/GamePage.css">
+    <link rel="stylesheet" href="../CSS/Global.css">
+    <title>Best Curve</title>
+</head>
+<body>
+<header>
+    <h1 onclick="location.href='MainPage.html'"> Best Curve </h1>
+</header>
+
+<div id="overlay"> </div>
+
+<div id="popup">
+    <h6> YOU DIED :(</h6>
+    <div id="newHighscore">
+        <div id="playerScoreText"></div>
+        <h5 id="posText"> You placed <span id="position" class="redHighlightSpan"></span> in the leaderboard, please enter your name</h5>
+        <div id="confirmWrap">
+            <label for="playerName"> Name: </label>
+            <div id="inputConfirmWrap"> <input type="text" id="playerName">
+                <button id="confirmButton"> <h3> Confirm </h3> </button>
+            </div>
+        </div>
+    </div>
+
+    <div id="newHighscoreFooter">
+        <button id="menuButton" onclick="location.href='MainPage.html'"> Main Menu</button>
+        <button id="highscoreButton" onclick="location.href='ScorePage.html'"> Highscore List </button>
+        <button id="playAgainButton" onclick="location.href='GamePage.html'"> Play Again </button>
+    </div>
+</div>
+
+<div id="readyOverlay">
+    <h6> ARE YOU READY?</h6>
+    <h4> PRESS <span class="redHighlightSpan">ENTER</span> TO START</h4>
+</div>
+
+<div id="scoreWrap">
+    <h2> Score: </h2>
+    <h2 id="score">0</h2>
+</div>
+<div id="mapContainer"></div>
+<div id="infoWrap">
+    <div id="abilitySkipWrap">
+        <h2> Skip: </h2>
+        <div id="abilitySkipSymbol"></div>
+    </div>
+    <ul id="debuffWrap">
+        <li class="debuffElementWrap">
+            <div class="debuffTitle">
+                <h4> Invert Control </h4>
+                <div class="scoreTokenDummy invDebuff"></div>
+            </div>
+            <div class="debuffTimer">
+                <h3 id="invertDebuff"> _ </h3>
+            </div>
+        </li>
+        <li class="debuffElementWrap">
+            <div class="debuffTitle">
+                <h4> Radius+ </h4>
+                <div class="scoreTokenDummy incCurDebuff"></div>
+            </div>
+            <div class="debuffTimer">
+                <h3 id="increaseCurveRadius"> _ </h3>
+            </div>
+        </li>
+        <li class="debuffElementWrap">
+            <div class="debuffTitle">
+                <h4> Speed+ </h4>
+                <div class="scoreTokenDummy incSpeDebuff"></div>
+            </div>
+            <div class="debuffTimer">
+                <h3 id="increaseSpeed"> _ </h3>
+            </div>
+        </li>
+        <li class="debuffElementWrap">
+            <div class="debuffTitle">
+                <h4> Invisible </h4>
+                <div class="scoreTokenDummy invisibleDebuff"></div>
+            </div>
+            <div class="debuffTimer">
+                <h3 id="invisiblePlayer"> _ </h3>
+            </div>
+        </li>
+    </ul>
+</div>
+</body>
+
+<script type="module" src="../JS/CurveBall.js"></script>
+<script type="module" src="../JS/Player.js"></script>
+<script type="module" src="../JS/Main.js"></script>
+
+</html>

@@ -1,0 +1,13 @@
+#textWrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+}
+
+p {
+    font-family: var(--font-family);
+    font-size: 50px;
+    color: azure;
+    padding: 0 15%;
+}

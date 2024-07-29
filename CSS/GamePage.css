@@ -1,0 +1,267 @@
+#mapContainer{
+    /* ensure that the margin is included in the % height */
+    box-sizing: border-box;
+    /* 10% for header and 15% for more space */
+    min-height: calc(100vh - 25% - 90px);
+    margin: 10px 20px 20px 20px;
+    background-color: gray;
+    border: 6px solid black;
+
+    position: relative;
+    background-image: radial-gradient(#6a6a77, #3a3a41);;
+}
+
+h2, h4 {
+    font-size: 3vh;
+    color: black;
+    font-variant-caps: all-petite-caps;
+    font-family: var(--font-family);
+    margin: 0;
+}
+
+h4 {
+    color: white;
+}
+
+h3 {
+    margin: 0;
+    font-weight: lighter;
+    font-size: 2.5vw;
+    font-family: var(--font-family);
+}
+
+#overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(63, 63, 63, 0.5);
+    z-index: 9;
+
+    visibility: visible;
+}
+
+#popup {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+
+    top: 10%;
+    left: 25%;
+    width: 50%;
+    height: 80%;
+    background-color: #000038;
+    z-index: 10;
+
+    visibility: hidden;
+}
+
+#readyOverlay {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    top: 10%;
+    left: 25%;
+    width: 50%;
+    height: 80%;
+    z-index: 10;
+
+    visibility: visible;
+}
+
+#readyOverlay h6 {
+    margin: 0;
+    font-size: 60px;
+}
+
+.redHighlightSpan {
+    color: #ff3e3e;
+    font-size: 1.2em;
+}
+
+#newHighscore {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+h5, h6, #playerScoreText, label{
+    margin: 0;
+    font-size: 1.5vw;
+    color: white;
+    font-family: var(--font-family);
+    font-weight: lighter;
+}
+
+#confirmWrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+
+    margin-top: 5%;
+}
+
+h6 {
+    margin: 10% 0 0 0;
+    font-size: 3vw;
+    font-weight: bold;
+}
+
+#playerScoreText {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-weight: lighter;
+
+    margin: 0 0 4% 0;
+    font-size: 3vw;
+}
+
+#newHighscoreFooter {
+    display: flex;
+}
+
+button:hover,
+button:focus {
+    box-shadow: inset 0 0 0 2em #20756e;
+}
+
+button {
+    background-color: darkturquoise;
+    text-transform: uppercase;
+    font-family: var(--font-family);
+    font-size: 1vw;
+    cursor: pointer;
+    padding: 2% 0;
+    margin: 2%;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    width: 15em;
+    transition: 0.25s;
+}
+
+#confirmButton {
+    padding: 0 10px;
+    border-radius: 5px;
+    width: auto;
+}
+
+#inputConfirmWrap {
+    display: flex;
+    gap: 3%;
+}
+
+
+.curveBall {
+    position: absolute;
+    border-radius: 50%;
+}
+
+.scoreToken{
+    position: absolute;
+    border-radius: 50%;
+}
+
+.scoreTokenDummy {
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+}
+
+.invDebuff {
+    background-color: yellow;
+}
+
+.incCurDebuff {
+    background-color: deeppink;
+}
+
+.incSpeDebuff {
+    background-color: darkorange;
+}
+.invisibleDebuff {
+    background-color: white;
+}
+
+
+#scoreWrap{
+    margin: 20px 20px 0 20px;
+    gap: 20px;
+    height: 30px;
+    padding: 0 100px 0 10px;
+    background-color: darkturquoise;
+    align-items: center;
+    border: 2px solid black;
+
+    display: inline-flex
+}
+
+#infoWrap{
+    display: flex;
+    margin: 0 20px 0 20px;
+}
+
+#abilitySkipSymbol{
+    margin: 1vh;
+    border-radius: 50%;
+    width: 4vh;
+    height: 4vh;
+
+    box-shadow: 0 0 5px 3px gold,
+                0 0 10px 2px grey;
+    background-color: yellow;
+}
+
+#abilitySkipWrap {
+    display: flex;
+    gap: 20px;
+    padding: 0 10px 0 10px;
+    background-color: darkturquoise;
+    align-items: center;
+    border: 2px solid black;
+}
+
+#debuffWrap {
+    display: flex;
+    gap: 20px;
+    margin: 0 0 0 2%;
+    border: 2px solid black;
+    padding: 10px;
+    background-color: darkturquoise;
+    list-style-type: none;
+}
+
+.debuffElementWrap {
+    background-color: lightgreen;
+    border: 2px solid black;
+}
+
+.debuffTitle {
+    background-color: darkgreen;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+    padding: 0 10px 0 10px;
+}
+
+.debuffTimer {
+    display: flex;
+    justify-content: center;
+}
+
+#playerName {
+    font-family: var(--font-family);
+    font-size: 1.5em;
+}
+
